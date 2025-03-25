@@ -1,10 +1,9 @@
 [project]
 name = "python_package_template"
-version = "1.0.0-alpha"
 authors = [
   { name="Mark", email="mark@remarkablemark.org" },
 ]
-description = "Python package template"
+description = "Python Package Template"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -13,6 +12,7 @@ classifiers = [
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
+dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://github.com/remarkablemark/python_package_template"
