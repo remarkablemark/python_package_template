@@ -2,24 +2,41 @@
 
 🐍 Python package template
 
+## Install
+
+[Python](https://pypi.org/project/python_package_template/):
+
+```sh
+pip install python_package_template
+```
+
+## Usage
+
+Print greeting:
+
+```py
+from python_package_template import template
+print(template.hello())
+```
+
 ## Development
 
-Create virtual environment:
+Create the virtual environment:
 
 ```sh
 python3 -m venv .venv
 ```
 
-Activate virtual environment:
+Activate the virtual environment:
 
 ```sh
 source .venv/bin/activate
 ```
 
-Install PyPA's [build](https://github.com/pypa/build):
+Install the dependencies:
 
 ```sh
-python3 -m pip install --upgrade build
+python3 -m pip install -r requirements.txt
 ```
 
 Generate distribution packages:
@@ -28,16 +45,16 @@ Generate distribution packages:
 python3 -m build
 ```
 
-Install [Twine](https://github.com/pypa/twine):
-
-```sh
-python3 -m pip install --upgrade twine
-```
-
 Upload all of the archives under `dist`:
 
 ```sh
 python3 -m twine upload --repository testpypi dist/*
+```
+
+Install the package:
+
+```sh
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
 ```
 
 ## License
