@@ -36,7 +36,7 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```sh
-python3 -m pip install -r requirements.txt
+python3 -m pip install -e '.[test]'
 ```
 
 Generate distribution packages:

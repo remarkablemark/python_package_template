@@ -13,6 +13,13 @@ classifiers = [
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
 dynamic = ["version"]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "build==1.2.2.post1",
+    "twine==6.1.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/remarkablemark/python_package_template"
