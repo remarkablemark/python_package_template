@@ -36,7 +36,13 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```sh
-python3 -m pip install -e '.[test]'
+pip install -e '.[test]'
+```
+
+Install pre-commit into your git hooks:
+
+```sh
+pre-commit install
 ```
 
 Generate distribution packages:
@@ -48,13 +54,13 @@ python3 -m build
 Upload all of the archives under `dist`:
 
 ```sh
-python3 -m twine upload --repository testpypi dist/*
+twine upload --repository testpypi dist/*
 ```
 
 Install the package:
 
 ```sh
-python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
+pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
 ```
 
 ## License
