@@ -1,4 +1,4 @@
-def hello(name: str="World") -> str:
+def hello(name: str = "World") -> str:
     """
     Greet a name.
 

@@ -17,6 +17,7 @@ dependencies = []
 
 [project.optional-dependencies]
 test = [
+    "black==25.1.0",
     "build==1.2.2.post1",
     "twine==6.1.0",
 ]
@@ -24,3 +25,6 @@ test = [
 [project.urls]
 Homepage = "https://github.com/remarkablemark/python_package_template"
 Issues = "https://github.com/remarkablemark/python_package_template/issues"
+
+[tool.black]
+fast = true
