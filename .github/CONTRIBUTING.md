@@ -119,3 +119,5 @@ pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_t
 ## Release
 
 Release and publish are automated with [Release Please](https://github.com/googleapis/release-please).
+
+[Add a new pending publisher to PyPI.](https://pypi.org/manage/account/publishing/)
