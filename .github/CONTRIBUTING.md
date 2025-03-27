@@ -7,7 +7,7 @@
 - [Install](#install)
 - [Develop](#develop)
 - [Test](#test)
-- [Lint](#lint)
+- [Build](#build)
 - [Release](#release)
 
 </details>
