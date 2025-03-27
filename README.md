@@ -1,5 +1,9 @@
 # python_package_template
 
+[![PyPI version](https://badgen.net/pypi/v/python_package_template)](https://pypi.org/project/python-package-template/)
+[![test](https://github.com/remarkablemark/python_package_template/actions/workflows/test.yml/badge.svg)](https://github.com/remarkablemark/python_package_template/actions/workflows/test.yml)
+[![lint](https://github.com/remarkablemark/python_package_template/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablemark/python_package_template/actions/workflows/lint.yml)
+
 🐍 Python Package Template
 
 ## Install
