@@ -98,6 +98,22 @@ Run the tests:
 pytest
 ```
 
+Run the tests with [coverage](https://coverage.readthedocs.io/):
+
+```sh
+coverage run -m pytest
+```
+
+Generate a coverage report:
+
+```sh
+coverage report
+```
+
+```sh
+coverage html
+```
+
 ## Lint
 
 Update pre-commit hooks to the latest version:
