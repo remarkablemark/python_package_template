@@ -1,4 +1,8 @@
-"""Python Package Template"""
+"""
+Python Package Template
+
+.. include:: ../../README.md
+"""
 
 from .template import hello
 

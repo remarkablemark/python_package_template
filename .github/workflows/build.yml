@@ -2,7 +2,7 @@ name: build
 on: [push, pull_request]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -22,3 +22,12 @@ jobs:
 
       - name: Generate packages
         run: python3 -m build
+
+      - name: Build docs
+        run: pdoc src/python_package_template/ -o docs
+
+      - name: Deploy
+        if: github.ref_name == 'master'
+        uses: remarkablemark/gitploy-action@v1
+        with:
+          directory: docs

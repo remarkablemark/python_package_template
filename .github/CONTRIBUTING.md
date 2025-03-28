@@ -160,6 +160,12 @@ Install the package:
 pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
 ```
 
+Generate [docs](https://pdoc.dev/):
+
+```sh
+pdoc src/python_package_template/
+```
+
 ## Release
 
 Release and publish are automated with [Release Please](https://github.com/googleapis/release-please).
