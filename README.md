@@ -6,6 +6,10 @@
 
 🐍 Python Package Template
 
+## Prerequisites
+
+- [Python](https://www.python.org/)
+
 ## Install
 
 [Python](https://pypi.org/project/python_package_template/):
