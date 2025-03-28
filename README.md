@@ -23,9 +23,9 @@ pip install python_package_template
 Print greeting:
 
 ```py
-from python_package_template import template
+from python_package_template import hello
 
-print(template.hello())
+print(hello())
 ```
 
 ## License
