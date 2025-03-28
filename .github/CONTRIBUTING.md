@@ -7,6 +7,7 @@
 - [Install](#install)
 - [Develop](#develop)
 - [Test](#test)
+- [Lint](#lint)
 - [Build](#build)
 - [Release](#release)
 
@@ -50,6 +51,7 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```sh
+pip install -e '.[build]'
 pip install -e '.[test]'
 ```
 
@@ -90,10 +92,36 @@ Things that will improve the chance that your pull request will be accepted:
 
 ## Test
 
-Run tests:
+Run the tests:
 
 ```sh
 pytest
+```
+
+## Lint
+
+Update pre-commit hooks to the latest version:
+
+```sh
+pre-commit autoupdate
+```
+
+Run all pre-commit hooks:
+
+```sh
+pre-commit run --all-files
+```
+
+Lint all files in the current directory:
+
+```sh
+ruff check
+```
+
+Format all files in the current directory:
+
+```sh
+ruff format
 ```
 
 ## Build
