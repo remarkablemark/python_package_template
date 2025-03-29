@@ -160,7 +160,7 @@ Install the package:
 pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
 ```
 
-Generate [docs](https://pdoc.dev/):
+Generate the docs with [pdoc](https://pdoc.dev/):
 
 ```sh
 pdoc src/python_package_template/
