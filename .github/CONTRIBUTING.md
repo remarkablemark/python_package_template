@@ -1,19 +1,5 @@
 # Contributing
 
-<details>
-<summary>Table of Contents</summary>
-
-- [Fork](#fork)
-- [Install](#install)
-- [Develop](#develop)
-- [Test](#test)
-- [Lint](#lint)
-- [Build](#build)
-- [Docs](#docs)
-- [Release](#release)
-
-</details>
-
 Pull requests are welcome! By participating in this project, you agree to abide by our [code of conduct](https://github.com/remarkablemark/.github/blob/master/CODE_OF_CONDUCT.md).
 
 ## Fork
