@@ -1,11 +1,11 @@
-name: release-please
+name: release
 on:
   push:
     branches:
       - master
 
 jobs:
-  release-please:
+  release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,8 +21,8 @@ jobs:
           release-type: python
 
   publish:
-    needs: release-please
-    if: ${{ needs.release-please.outputs.release_created }}
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -38,7 +38,6 @@ jobs:
       - name: Use Python
         uses: actions/setup-python@v5
         with:
-          cache: pip
           python-version: 3
 
       - name: Install dependencies
@@ -48,4 +47,6 @@ jobs:
         run: python -m build
 
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@v1
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}

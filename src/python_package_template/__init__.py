@@ -1,6 +1,4 @@
 """
-Python Package Template
-
 .. include:: ../../README.md
 """
 

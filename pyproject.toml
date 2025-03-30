@@ -1,5 +1,6 @@
 [project]
 name = "python_package_template"
+version = "0.0.0"
 authors = [
     { name="Mark", email="mark@remarkablemark.org" },
 ]
@@ -11,23 +12,26 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 license = "MIT"
-license-files = ["LICEN[CS]E*"]
-dynamic = ["version"]
+license-files = ["LICENSE"]
 dependencies = []
 
 [project.optional-dependencies]
 build = [
     "build==1.2.2.post1",
-    "pdoc==15.0.1",
     "twine==6.1.0",
 ]
-test = [
+docs = [
+    "pdoc==15.0.1",
+]
+lint = [
     "black==25.1.0",
-    "coverage==7.7.1",
     "isort==6.0.1",
     "pre-commit==4.2.0",
-    "pytest==8.3.5",
     "ruff==0.11.2",
+]
+test = [
+    "coverage==7.7.1",
+    "pytest==8.3.5",
 ]
 
 [project.urls]
@@ -36,3 +40,8 @@ Issues = "https://github.com/remarkablemark/python_package_template/issues"
 
 [tool.black]
 fast = true
+
+[tool.coverage.run]
+omit = [
+    "/tmp/*",
+]

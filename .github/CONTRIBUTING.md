@@ -9,6 +9,7 @@
 - [Test](#test)
 - [Lint](#lint)
 - [Build](#build)
+- [Docs](#docs)
 - [Release](#release)
 
 </details>
@@ -51,8 +52,7 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```sh
-pip install -e '.[build]'
-pip install -e '.[test]'
+pip install -e '.[lint]'
 ```
 
 Install pre-commit into your git hooks:
@@ -63,11 +63,7 @@ pre-commit install
 
 ## Develop
 
-Make your changes, add tests/documentation, and ensure tests pass:
-
-```sh
-pytest
-```
+Make your changes, add tests/documentation, and ensure [tests](#test) pass.
 
 Write a commit message that follows the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
@@ -92,6 +88,12 @@ Things that will improve the chance that your pull request will be accepted:
 
 ## Test
 
+Install the dependencies:
+
+```sh
+pip install -e '.[test]'
+```
+
 Run the tests:
 
 ```sh
@@ -115,6 +117,12 @@ coverage html
 ```
 
 ## Lint
+
+Install the dependencies:
+
+```sh
+pip install -e '.[lint]'
+```
 
 Update pre-commit hooks to the latest version:
 
@@ -142,6 +150,12 @@ ruff format
 
 ## Build
 
+Install the dependencies:
+
+```sh
+pip install -e '.[build]'
+```
+
 Generate distribution packages:
 
 ```sh
@@ -158,6 +172,14 @@ Install the package:
 
 ```sh
 pip install --index-url https://test.pypi.org/simple/ --no-deps python_package_template
+```
+
+## Docs
+
+Install the dependencies:
+
+```sh
+pip install -e '.[docs]'
 ```
 
 Generate the docs with [pdoc](https://pdoc.dev/):
