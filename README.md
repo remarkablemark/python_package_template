@@ -12,7 +12,7 @@
 
 ## Install
 
-[Python](https://pypi.org/project/python_package_template/):
+Install the package:
 
 ```sh
 pip install python_package_template
@@ -20,7 +20,7 @@ pip install python_package_template
 
 ## Usage
 
-Print greeting:
+Print the greeting:
 
 ```py
 from python_package_template import hello
