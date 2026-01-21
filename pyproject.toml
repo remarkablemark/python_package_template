@@ -45,6 +45,9 @@ fast = true
 [tool.mypy]
 strict = true
 ignore_missing_imports = true
+exclude = [
+    '^tests/.*'
+]
 
 [tool.coverage.run]
 omit = [
