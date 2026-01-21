@@ -1,5 +1,5 @@
 [project]
-name = "python_package_template"
+name = "python-package-template"
 version = "0.0.0"
 authors = [
     { name="Mark", email="mark@remarkablemark.org" },
@@ -35,8 +35,8 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/remarkablemark/python_package_template"
-Issues = "https://github.com/remarkablemark/python_package_template/issues"
+Homepage = "https://github.com/remarkablemark/python-package-template"
+Issues = "https://github.com/remarkablemark/python-package-template/issues"
 
 [tool.black]
 fast = true

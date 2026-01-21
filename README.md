@@ -1,8 +1,8 @@
-# python_package_template
+# python-package-template
 
-[![PyPI version](https://img.shields.io/pypi/v/python_package_template)](https://pypi.org/project/python_package_template/)
-[![codecov](https://codecov.io/gh/remarkablemark/python_package_template/graph/badge.svg?token=A5tAkYLEAw)](https://codecov.io/gh/remarkablemark/python_package_template)
-[![lint](https://github.com/remarkablemark/python_package_template/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablemark/python_package_template/actions/workflows/lint.yml)
+[![PyPI version](https://img.shields.io/pypi/v/python-package-template)](https://pypi.org/project/python-package-template/)
+[![codecov](https://codecov.io/gh/remarkablemark/python-package-template/graph/badge.svg?token=A5tAkYLEAw)](https://codecov.io/gh/remarkablemark/python-package-template)
+[![lint](https://github.com/remarkablemark/python-package-template/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablemark/python-package-template/actions/workflows/lint.yml)
 
 🐍 Python Package Template
 
@@ -15,7 +15,7 @@
 Install the package:
 
 ```sh
-pip install python_package_template
+pip install python-package-template
 ```
 
 ## Usage
@@ -30,4 +30,4 @@ print(hello())
 
 ## License
 
-[MIT](https://github.com/remarkablemark/python_package_template/blob/master/LICENSE)
+[MIT](https://github.com/remarkablemark/python-package-template/blob/master/LICENSE)
