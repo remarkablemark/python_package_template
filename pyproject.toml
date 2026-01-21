@@ -42,7 +42,13 @@ Issues = "https://github.com/remarkablemark/python-package-template/issues"
 [tool.black]
 fast = true
 
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
 [tool.coverage.run]
 omit = [
+    "*/tests/*",
+    "/opt/*",
     "/tmp/*",
 ]
