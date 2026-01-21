@@ -23,5 +23,11 @@ jobs:
       - name: Type check
         run: mypy .
 
+      - name: Run Black
+        run: black --check .
+
+      - name: Run Ruff
+        run: ruff check
+
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
