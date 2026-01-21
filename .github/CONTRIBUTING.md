@@ -38,7 +38,7 @@ source .venv/bin/activate
 Install the dependencies:
 
 ```sh
-pip install -e '.[lint]'
+pip install -e '.[build,docs,lint,test]'
 ```
 
 Install pre-commit into your git hooks:
