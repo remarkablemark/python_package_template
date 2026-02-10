@@ -55,3 +55,11 @@ omit = [
     "/opt/*",
     "/tmp/*",
 ]
+
+[tool.coverage.report]
+show_missing = true
+sort = "-Cover"
+fail_under = 100
+
+[tool.coverage.html]
+show_contexts = true
