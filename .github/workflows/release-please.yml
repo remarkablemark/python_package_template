@@ -7,12 +7,11 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - name: Release Please
@@ -25,12 +24,12 @@ jobs:
     needs: release
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     environment:
       name: pypi
       url: https://pypi.org/p/python-package-template
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout repository
