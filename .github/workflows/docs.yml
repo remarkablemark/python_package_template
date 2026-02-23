@@ -11,17 +11,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Use Python
-        uses: actions/setup-python@v6
-        with:
-          cache: pip
-          python-version-file: pyproject.toml
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: pip install -e .[docs]
+        run: uv sync --extra docs
 
       - name: Build docs
-        run: pdoc src/python_package_template/ -o docs
+        run: uv run pdoc src/python_package_template/ -o docs
 
       - name: Deploy
         if: github.ref_name == 'master'
