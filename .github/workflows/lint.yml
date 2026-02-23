@@ -20,11 +20,5 @@ jobs:
       - name: Type check
         run: uv run mypy .
 
-      - name: Run Black
-        run: uv run black --check .
-
-      - name: Run Ruff
-        run: uv run ruff check
-
       - name: Run pre-commit hooks
         run: uv run pre-commit run --all-files

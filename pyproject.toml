@@ -20,8 +20,6 @@ docs = [
     "pdoc==16.0.0",
 ]
 lint = [
-    "black==26.1.0",
-    "isort==8.0.0",
     "mypy==1.19.1",
     "pre-commit==4.5.1",
     "ruff==0.15.2",
@@ -39,8 +37,21 @@ Issues = "https://github.com/remarkablemark/python-package-template/issues"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.black]
-fast = true
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort (import sorting)
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "ARG001",  # unused arguments in functions
+    "T201",  # no print statements
+]
+ignore = [
+    "E501",  # line too long (handled by ruff)
+]
 
 [tool.mypy]
 strict = true
