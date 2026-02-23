@@ -17,34 +17,22 @@ cd python-package-template
 
 ## Install
 
-Install [Python](https://www.python.org/):
+Install [uv](https://docs.astral.sh/uv/):
 
 ```sh
-brew install python
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Create the virtual environment:
+Install with development dependencies:
 
 ```sh
-python3 -m venv .venv
-```
-
-Activate the virtual environment:
-
-```sh
-source .venv/bin/activate
-```
-
-Install the dependencies:
-
-```sh
-pip install -e '.[build,docs,lint,test]'
+uv sync --all-extras
 ```
 
 Install pre-commit into your git hooks:
 
 ```sh
-pre-commit install
+uv run pre-commit install
 ```
 
 ## Develop
@@ -74,104 +62,80 @@ Things that will improve the chance that your pull request will be accepted:
 
 ## Test
 
-Install the dependencies:
-
-```sh
-pip install -e '.[test]'
-```
-
 Run the tests:
 
 ```sh
-pytest
+uv run pytest
 ```
 
 Run the tests with [coverage](https://coverage.readthedocs.io/):
 
 ```sh
-coverage run -m pytest
+uv run coverage run -m pytest
 ```
 
 Generate a coverage report:
 
 ```sh
-coverage report
+uv run coverage report
 ```
 
 ```sh
-coverage html
+uv run coverage html
 ```
 
 ## Lint
 
-Install the dependencies:
-
-```sh
-pip install -e '.[lint]'
-```
-
 Update pre-commit hooks to the latest version:
 
 ```sh
-pre-commit autoupdate
+uv run pre-commit autoupdate
 ```
 
 Run all pre-commit hooks:
 
 ```sh
-pre-commit run --all-files
+uv run pre-commit run --all-files
 ```
 
 Lint all files in the current directory:
 
 ```sh
-ruff check
+uv run ruff check --fix
 ```
 
 Format all files in the current directory:
 
 ```sh
-ruff format
+uv run ruff format
 ```
 
 ## Build
 
-Install the dependencies:
-
-```sh
-pip install -e '.[build]'
-```
-
 Generate distribution packages:
 
 ```sh
-python3 -m build
+uv build
 ```
 
 Upload all of the archives under `dist`:
 
 ```sh
-twine upload --repository testpypi dist/*
+uv publish --publish-url https://test.pypi.org/legacy/
 ```
 
 Install the package:
 
 ```sh
-pip install --index-url https://test.pypi.org/simple/ --no-deps python-package-template
+uv add --index-url https://test.pypi.org/simple/ --no-deps python-package-template
 ```
 
 ## Docs
 
-Install the dependencies:
-
-```sh
-pip install -e '.[docs]'
-```
-
 Generate the docs with [pdoc](https://pdoc.dev/):
 
 ```sh
-pdoc src/python_package_template/
+uv run pdoc src/python_package_template/
 ```
 
 ## Release
