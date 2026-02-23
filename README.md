@@ -19,7 +19,7 @@ Install with uv:
 uv add python-package-template
 ```
 
-Install with pip:
+Or install with pip:
 
 ```sh
 pip install python-package-template
