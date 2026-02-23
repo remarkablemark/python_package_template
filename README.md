@@ -9,10 +9,17 @@
 ## Prerequisites
 
 - [Python](https://www.python.org/)
+- [uv](https://docs.astral.sh/uv/) or pip
 
 ## Install
 
-Install the package:
+Install with uv:
+
+```sh
+uv add python-package-template
+```
+
+Install with pip:
 
 ```sh
 pip install python-package-template

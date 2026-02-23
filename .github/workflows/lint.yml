@@ -11,23 +11,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Use Python
-        uses: actions/setup-python@v6
-        with:
-          cache: pip
-          python-version-file: pyproject.toml
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: pip install -e .[lint]
+        run: uv sync --extra lint
 
       - name: Type check
-        run: mypy .
+        run: uv run mypy .
 
       - name: Run Black
-        run: black --check .
+        run: uv run black --check .
 
       - name: Run Ruff
-        run: ruff check
+        run: uv run ruff check
 
       - name: Run pre-commit hooks
-        run: pre-commit run --all-files
+        run: uv run pre-commit run --all-files

@@ -11,20 +11,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Use Python
-        uses: actions/setup-python@v6
-        with:
-          cache: pip
-          python-version-file: pyproject.toml
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: pip install -e .[test]
+        run: uv sync --extra test
 
-      - name: Run tests and collect coverage
+      - name: Run tests with coverage
         run: |
-          coverage run -m pytest
-          coverage report
-          coverage xml
+          uv run coverage run -m pytest
+          uv run coverage report
+          uv run coverage xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
