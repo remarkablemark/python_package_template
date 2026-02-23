@@ -98,16 +98,22 @@ Run all pre-commit hooks:
 uv run pre-commit run --all-files
 ```
 
-Lint all files in the current directory:
+Lint all files:
 
 ```sh
-uv run ruff check --fix
+uv run ruff check # --fix
 ```
 
-Format all files in the current directory:
+Format all files:
 
 ```sh
 uv run ruff format
+```
+
+Run type checking:
+
+```sh
+uv run pyright
 ```
 
 ## Build

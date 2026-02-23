@@ -21,3 +21,9 @@ repos:
       - id: ruff
         args: [--fix]
       - id: ruff-format
+
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.408
+    hooks:
+      - id: pyright
+        entry: bash -c 'uv run pyright'
