@@ -113,7 +113,7 @@ uv run ruff format
 Run type checking:
 
 ```sh
-uv run pyright
+uv run mypy .
 ```
 
 ## Build
