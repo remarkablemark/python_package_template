@@ -22,7 +22,7 @@ docs = [
 lint = [
     "mypy==1.19.1",
     "pre-commit==4.5.1",
-    "ruff==0.15.2",
+    "ruff==0.15.4",
 ]
 test = [
     "coverage==7.13.4",
